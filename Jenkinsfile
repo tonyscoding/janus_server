@@ -7,7 +7,7 @@ node {
     stage('Build image') {
         sh "echo Build process..."
         // sh "docker build --rm -f ../Dockerfile_wsgi -t 797808164553.dkr.ecr.ap-northeast-2.amazonaws.com/tocol_image_repo:asgi-1.0.${env.BUILD_NUMBER} ."
-        sh "docker build --rm -f ../Dockerfile_front -t 797808164553.dkr.ecr.ap-northeast-2.amazonaws.com/tocol_image_repo:janus ."
+        sh "docker build --rm -t 797808164553.dkr.ecr.ap-northeast-2.amazonaws.com/tocol_image_repo:janus ."
     }
 
     stage('Push image') {
